@@ -1,0 +1,68 @@
+:root{
+    --navtext: rgb(255, 255, 255);
+    --background: #323232;
+    
+}
+body{
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri,
+   'Trebuchet MS', sans-serif;
+   background: var(--background);
+}
+nav{
+    position: absolute;
+    position: fixed;
+    width: 100%;
+    height: 4rem;
+    background: black;
+    text-align: center;
+    z-index: 999;
+}
+.menuItem{
+    color: var(--navtext);
+    text-decoration: none;
+    font-size: 25px;
+    margin-right: 3rem;
+    margin-left: 3rem;
+}
+ul.inline li{
+    display: inline;
+
+    
+}
+.logo{
+    position: absolute;
+    left: 0;
+    width: 7rem;
+    position: fixed
+}
+
+#shop{
+    position: relative;
+    height: 50rem;
+    background: gray;
+    overflow: hidden;
+}
+
+.banner{
+    position: absolute;
+    top:0px; 
+    left:0px;
+    white-space: nowrap;
+    animation: bannermove 25s linear infinite;
+}
+.shopbackground{
+    height: 30rem;
+    width: 33vw;
+    margin-top: 4rem;
+
+}
+
+@keyframes bannermove {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-50%, 0);
+    }
+  }
