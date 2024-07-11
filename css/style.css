@@ -1,5 +1,5 @@
 :root{
-    --navtext: rgb(255, 255, 255);
+    --text: rgb(255, 255, 255);
     --background: #323232;
     
 }
@@ -9,6 +9,13 @@ body{
    'Trebuchet MS', sans-serif;
    background: var(--background);
 }
+
+h2{
+    color: var(--text);
+    text-align: center;
+    font-size: 30px;
+}
+/* nav styling */
 nav{
     position: absolute;
     position: fixed;
@@ -18,12 +25,12 @@ nav{
     text-align: center;
     z-index: 999;
 }
+a{
+    position: relative;
+}
+
 .menuItem{
-    color: var(--navtext);
-    text-decoration: none;
-    font-size: 25px;
-    margin-right: 3rem;
-    margin-left: 3rem;
+    display: none;
 }
 ul.inline li{
     display: inline;
@@ -37,10 +44,10 @@ ul.inline li{
     position: fixed
 }
 
+/* shop styling */
 #shop{
     position: relative;
-    height: 50rem;
-    background: gray;
+    height: 68rem;
     overflow: hidden;
 }
 
@@ -50,19 +57,97 @@ ul.inline li{
     left:0px;
     white-space: nowrap;
     animation: bannermove 25s linear infinite;
+    z-index: -1;
 }
 .shopbackground{
-    height: 30rem;
-    width: 33vw;
+    height: 25rem;
+    width: 100%;
     margin-top: 4rem;
-
 }
+.shopItems{
+    padding-top: 18rem;
+    font-size: 25px;
+    text-align: center;
+}
+.items{
+    width: 80%;
+    height: 12rem;
+    background: red;
+    color: var(--text);
+    margin: auto;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.more{
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    font-size: 25px;
+    color: var(--text);
+    text-decoration: none;
+}
+
+/* about us styling */
+#aboutus{
+    height: 30rem;
+    background: grey;
+}
+
+
 
 @keyframes bannermove {
     0% {
         transform: translate(0, 0);
     }
     100% {
-        transform: translate(-50%, 0);
+        transform: translate(-304%, 0);
     }
+  }
+
+  @media only screen and (min-width: 600px) {
+    
+    .menuItem{
+        display: inline;
+        color: var(--text);
+        text-decoration: none;
+        font-size: 25px;
+        margin-right: 3rem;
+        margin-left: 3rem;
+    }
+
+    .shopbackground{
+        height: 25rem;
+        width: 33vw;
+        margin-top: 4rem;
+    
+    }
+    .banner{
+        animation: bannermove 25s linear infinite;
+    }
+    a::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        border-radius: 4px;
+        background-color: var(--text);
+        bottom: 0;
+        left: 0;
+        transform-origin: right;
+        transform: scaleX(0);
+        transition: transform .3s ease-in-out;
+      }
+    
+    a:hover::before {
+      transform-origin: left;
+      transform: scaleX(1);
+    }
+    @keyframes bannermove {
+        0% {
+            transform: translate(0, 0);
+        }
+        100% {
+            transform: translate(-50%, 0);
+        }
+      }
   }
