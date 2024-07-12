@@ -140,7 +140,7 @@ iframe{
     display: block;
     margin: auto;
     width: 90vw;
-    height: 25rem;
+    height: 50vh;
 }
 
 /* footer styling */
@@ -172,7 +172,7 @@ footer{
     }
   }
 
-  @media only screen and (min-width: 600px) {
+  @media only screen and (min-width: 700px) {
     
     #shop{
         height: 40rem;  
@@ -226,7 +226,7 @@ footer{
 
     .paragraph{
         width: 60%;
-        height: 25rem;
+        height: inherit;
         line-height: 2rem;
     }
 
