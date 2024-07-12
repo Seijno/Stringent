@@ -83,13 +83,13 @@ ul.inline li{
 /* shop styling */
 #shop{
     position: relative;
-    height: 68rem;
+    height: 60rem;
     overflow: hidden;
+    /* background: black; */
 }
 
 .banner{
     position: absolute;
-    top:0px; 
     left:0px;
     white-space: nowrap;
     animation: bannermove 25s linear infinite;
@@ -116,8 +116,8 @@ ul.inline li{
 }
 .more{
     position: absolute;
-    bottom: 2rem;
-    right: 2rem;
+    bottom: 0.5rem;
+    right: 2.5rem;
 }
 
 /* about us styling */
@@ -135,6 +135,12 @@ iframe{
     border-radius: 5px;
     padding-top: 1rem;
     padding-bottom: 1rem;
+}
+.aboutusImg{
+    display: block;
+    margin: auto;
+    width: 90vw;
+    height: 25rem;
 }
 
 /* footer styling */
@@ -168,6 +174,10 @@ footer{
 
   @media only screen and (min-width: 600px) {
     
+    #shop{
+        height: 40rem;  
+    }
+
     .menuItem{
         display: inline;
         color: var(--text);
@@ -191,6 +201,38 @@ footer{
     }
     .banner{
         animation: bannermove 25s linear infinite;
+    }
+
+    .items{
+        display: inline-block;
+        width: 20%;
+        margin-right: 1.5rem;
+        margin-left: 1.5rem;
+    }
+
+    .more{
+        right: 14rem;
+    }
+
+    iframe{
+        display: block;
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .flex{
+        display: flex;
+    }
+
+    .paragraph{
+        width: 60%;
+        height: 25rem;
+        line-height: 2rem;
+    }
+
+    .aboutusImg{
+        width: 40%;
+        height: 27rem;
     }
 
     .footerlist{
